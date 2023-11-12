@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../.vscode/New"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cofee-project"
+	}
+}

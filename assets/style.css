@@ -1,0 +1,1775 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: vazir;
+    src: url("./fonts/Vazir.ttf");
+}
+@font-face {
+    font-family: varella;
+    src: url("./fonts/varela.ttf");
+}
+@font-face {
+    font-family: playfair;
+    src: url("./fonts/playfair-display/PlayfairDisplaySC-Regular.otf");
+}
+@font-face {
+    font-family: koodak;
+    src: url("./fonts/B\ Koodak\ Bold_p30download.com.ttf");
+}
+body{
+    font-family: playfair;
+    background-color: #ffffff;
+}
+
+ .header__background__image{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.menus{
+
+    color: white;
+}
+.menu__items{
+    display: flex;
+    gap: 6rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    list-style: none;
+    transition: 0.5s all;
+}
+.right__side{
+  width: 50%;
+  position: fixed;
+  height: 100vh;
+  background-color: #3c3c3cd9;
+  left: -50%;
+  top: 0;
+  transition: 0.5s all;
+  z-index: 999999;
+  backdrop-filter: blur(5px);
+}
+
+/* open sides */
+.menu__items.active__item{
+    right: 0;
+}
+.right__side.active__side{
+    left: 0;
+    transition: 0.5s all;
+}
+
+
+
+
+
+
+
+.item:hover{
+cursor: pointer;
+}
+.logo__karo{
+width:11rem;
+}
+.logo__karo__res{
+    width: 10rem;
+    display: none;
+}
+.item__text{
+    font-weight: normal;
+}
+.login{
+    color: white;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.login_{
+    color: white;
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sign__in{
+    font-weight: lighter;
+    background-color: #F9C06A;
+    padding: 0.1rem 1.4rem;
+    border-radius: 4rem;
+    color: black;
+    font-family: vazir;
+    cursor: pointer;
+    box-shadow: 0 3px 5px #F9C06A59;
+    transition: 0.5s all;
+    height: 3rem;
+}
+
+
+.berger{
+    display: none;
+  width: 35px;
+  height: 27px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+      position: absolute;
+      z-index: 22222;
+      top: 2.2rem;
+      right: 3rem;
+      z-index: 9999999;
+  }
+  
+  .berger__line{
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    width: 35px;
+    border-radius: 5px;
+    transition: 0.3s all;
+    transform-origin: 1px;
+  }
+  .berger.exit .berger__line:nth-child(1){
+    transform: rotate(45deg);
+  }
+  .berger.exit .berger__line:nth-child(2){
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  .berger.exit .berger__line:nth-child(3){
+    transform: rotate(-45deg);
+  }
+
+@media screen and (max-width: 1100px) {
+    .berger{
+        display: flex ;
+    }
+}
+
+
+
+.submit__buy{
+    width: 50%;
+    margin-top: 12rem;
+}
+.logo__container{
+    text-align: center;
+}
+.coffe__logo{
+width: 27rem;
+}
+.submit__text{
+    padding: 2rem 2rem 2rem 0;
+    color: white;
+    font-size: 1.6rem;
+}
+.submit__btn{
+    margin-right: 79%;
+    padding: 0.5rem 1.5rem;
+    background-color: #F9C06A;
+    border-radius: 10rem;
+    font-family: vazir;
+    box-shadow: 0 3px 5px #F9C06A59;
+    font-weight: normal;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.cup{
+margin-top: 30rem;
+width: 85%;
+margin-right: auto;
+margin-left: auto;
+display: flex;
+justify-content: space-between;
+}
+.right__section{
+    width: 50%;
+    margin-top: 2rem;
+}
+.cup__title{
+    font-size: 5rem;
+  color: #603809;
+}
+.cup__text{
+    font-size: 1.9rem;
+  color: #707070;
+  padding: 2rem 0;
+  font-family: koodak;
+}
+.more__btn{
+    display: inline;
+    padding: 0.5rem 1.5rem;
+    background-color: #F9C06A;
+    border-radius: 10rem;
+    font-family: vazir;
+    box-shadow: 0 3px 5px #F9C06A8A;
+    font-weight: normal;
+    cursor: pointer;
+    margin-right: 70%;
+    transition: 0.5s all;
+}
+.left__section{
+width: 45%;
+}
+.cup__image{
+    width: 100%;
+}
+.right__blast{
+    width: 22%;
+    margin-top: -22rem;
+}
+
+.shop{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.shop__title{
+    font-size: 4rem;
+  color: #603809;
+}
+.shop__text{
+    font-size: 1.6rem;
+  color: #707070;
+  padding: 2rem 0;
+  font-family: koodak;
+}
+
+.products{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.product{
+    border-radius: 2rem;
+    border:1px solid #F9C06A6B;
+    background-color: #fff3ed;;
+}
+.product__image{
+width: 20rem;
+}
+.product__title{
+    color: #603809;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+.product__compounds{
+    color: #1E1E1E;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+.product__price{
+    color: #603809;
+    color: #603809;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+.product__buy{
+    color: #1E1E1E;
+    background-color: #F9C06A;
+    border-radius: 10rem;
+    font-family: vazir;
+    box-shadow: 0 3px 5px #F9C06A8A;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 1rem 5rem;
+    padding: 0.8rem 0.5rem;
+    transition: 0.5s all;
+}
+
+.blast-two{
+    width: 29%;
+    position: absolute;
+    z-index: -10;
+    margin-top: -8rem;
+}
+
+.def__container{
+    margin-top: 8rem;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.def__title{
+    font-size: 4rem;
+  color: #603809;
+}
+.def__text{
+    font-size: 1.6rem;
+    color: #707070;
+    padding: 1.5rem 0;
+    font-family: koodak;
+}
+.options{
+display: flex;
+gap: 2rem;
+  justify-content: space-evenly;
+}
+.option{
+    width: 20rem;
+    border: 1px solid #F9C06A6B;
+    background-color: #fff3ed;
+    border-radius: 2px;
+}
+.option__logo{
+padding: 2rem;
+}
+.option__title{
+    color: #603809;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+.option__text{
+    font-size: 1.4rem;
+    color: #707070;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+.def__description{
+    font-size: 1.6rem;
+    color: #707070;
+    padding-top: 2rem;
+}
+.def__start{
+    font-size: 2rem;
+  color: #603809;
+}
+.join__us{
+    padding: 0.5rem 1.2rem;
+    background-color: #F9C06A;
+    border-radius: 2rem;
+    border: 0;
+    font-size: 1.2rem;
+    font-family: vazir;
+    margin: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 3px 5px #F9C06A8A;
+    transition: 0.5s all;
+}
+
+
+.morning__container{
+    margin-top: 8rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.morning__content{
+    width: 50%;
+  padding-top: 8rem;
+  padding-right: 8rem;
+  text-align: center;
+
+}
+.morning__img{
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    left: 0;
+}
+.morning__title{
+    font-size: 5rem;
+    color: #fff;
+
+}
+.morning__text{
+    font-size: 1.8rem;
+    padding: 4rem 0;
+    color: #fff;
+}
+.morning__button{
+    padding: 0.8rem 1.2rem;
+    background-color: #F9C06A;
+    border-radius: 2rem;
+    border: 0;
+    font-size: 1.2em;
+    font-family: vazir;
+    margin: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 3px 5px #F9C06A8A;
+    transition: 0.5s all;
+}
+
+
+.feedback__container{
+    margin-top: 30rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.feedback__title{
+    font-size: 4rem;
+  color: #603809;
+}
+.feedback__text{
+    font-size: 1.6rem;
+    color: #707070;
+    padding-top: 2rem;
+    font-family: koodak;
+}
+.feedbacks{
+    margin-top: 3rem;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background-color: #fff3ed;
+    border: 1px solid #F9C06A6B;
+    height: 35rem;
+}
+.cama{
+    font-size: 18rem;
+    line-height: 0;
+    text-align: left;
+    margin-top: 8rem;
+    color: #603809;
+    padding: 1rem;
+}
+.feedback__content{
+    width: 75%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #707070;
+    font-weight: bold;
+    padding-top: 3rem;
+}
+.feedback__user__name{
+margin-top: 2rem;
+font-size: 2.2rem;
+  color: #603809;
+}
+.feedback__user__job{
+    font-size: 1.5rem;
+    color: #707070;
+}
+.feedback__user__img{
+margin: 1rem;
+width: 136px;
+  border-radius: 2rem;
+}
+
+.right__row{
+    position: absolute;
+    right: 17.4%;
+    margin-top: 14rem;
+    cursor: pointer;
+}
+.left__row{
+    position: absolute;
+    left: 17.4%;
+    margin-top: 14rem;
+    cursor: pointer;
+}
+
+.blast__three{
+    position: absolute;
+  right: 0;
+  width: 31%;
+  margin-top: -7rem;
+}
+.blast__left{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    margin-top: -12rem;
+}
+
+
+
+
+
+/* footer style */
+
+.top-bg{
+    position: relative;
+    z-index: -234;
+    margin-top: 20rem;
+    box-shadow: 0px 12rem 13rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+.bottom-bg{
+    position: relative;
+    z-index: -235;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    width: 100%;
+}
+.footer__title{
+    text-align: center;
+    margin-top: -72rem;
+    font-size: 4rem;
+  color: #fff;
+}
+.footer__text{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 4rem;
+}
+.footer__input__container{
+    display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.footer__input{
+  padding-left: 15rem;
+  font-size: 1.2rem;
+  border: 0;
+}
+.share{
+    transition: 0.5s all;
+    padding: 0.8rem 0.5rem;
+    background-color: #F9C06A;
+    font-size: 1.5em;
+    font-family: vazir;
+    cursor: pointer;
+    color: #603809;
+}
+
+.right__cup{
+    position: absolute;
+  right: 0;
+  margin-top: -7rem;
+  width: 18%;
+}
+.left__cup{
+    position: absolute;
+  left: 0;
+  margin-top: -7rem;
+  width: 18%;
+}
+.bottom__of__footer{
+    margin-top: 25rem;
+  display: flex;
+  justify-content: space-evenly;
+    color: #fff;
+    text-align: center;
+    line-height: 3rem;
+  font-size: 1.2rem;
+}
+.call__title, .company__title, .about__title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.call__text{
+    line-height: 2rem;
+}
+.cafe__caro{
+    width: 20rem;
+}
+.caro__logo{
+    width: 50%;
+  margin-bottom: 2rem;
+}
+.caro__text{
+    line-height: normal;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* HOVER */
+.sign__in:hover ,.submit__btn:hover,.more__btn:hover,.product__buy:hover,.join__us:hover,.morning__button:hover ,.share:hover{
+    background-color: #ffbe5d;
+    box-shadow: 0 1px 8px #ffbd5aa3;
+    transition: 0.3s all;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1850px) { .footer__title { margin-top: -68rem;}.feedback__user__name { margin-top: 1rem;font-size: 2rem; }}
+@media screen and (max-width: 1800px) {
+    .product__image{width: 19rem;}
+    .cup__title {font-size: 4.5rem;}
+    .cup__text {font-size: 1.8rem;}
+    .blast__three {margin-top: -4rem;}
+    .morning__content {width: 60%;padding-right: 0rem; }
+    .footer__title {margin-top: -66rem;}
+}
+
+@media screen and (max-width: 1710px) {.footer__title {margin-top: -63rem;}}
+
+@media screen and (max-width: 1610px) {
+    .shop{
+        margin-top: -2rem;
+        width: 85%;
+    }
+    .right__blast {
+        margin-top: -12rem;
+      }
+    .left__section {
+        width: 40%;
+    }
+    .cup__text {
+        font-size: 1.6rem;
+      }
+      .cup__title {
+        font-size: 4rem;
+      }
+      .product__image {
+        width: 17rem;
+      }
+      .product__buy{
+        margin: 1rem 4rem;
+      }
+      .feedback__content{font-size: 1.4rem;}
+      .feedbacks{width: 80%;}
+      .right__row{right: 14.8%;}
+      .left__row{left: 14.8%;}
+      .footer__title {margin-top: -57rem;}
+      .footer__text ,.footer__input__container{
+        margin-top: 3rem;
+      }
+      .bottom__of__footer{margin-top: 17rem;}
+
+}
+@media screen and (max-width: 1450px) {
+    .blast-two {
+        margin-top: -5rem;
+      }
+    .right__section {
+        width: 58%;}
+    .right__blast {
+        width: 25%;
+    }
+    .menu__items{
+        gap: 2rem;
+    }
+    .navbar{font-size: 0.8rem;}
+    .sign__in{padding: 0.4rem 1.4rem;}
+    .logo__karo{width: 9rem;}
+    .coffe__logo {
+        width: 20rem;
+        margin-right: -15rem;
+      }
+    .submit__text{font-size: 1.3rem;}
+    .submit__btn {
+        margin-right: 62%;
+        display: inline;
+    }
+    .cup {
+        margin-top: 22rem;
+    }
+    .product__buy{
+        padding: 0.6rem 0.5rem;
+        margin: 1rem 2rem;
+    }
+    .product__price {font-size: 1.2rem;}
+    .product__compounds {font-size: 1.1rem;}
+    .product__title {font-size: 1.6rem};
+    .product__image {
+        width: 14rem;
+      }
+      .def__container {width: 85%;}
+      .morning__content {
+        width: 58%;
+        padding-top: 6rem;
+      }
+      .morning__title {
+        font-size: 4rem;
+      }
+      .morning__text {
+        font-size: 1.6rem;
+        padding: 3rem 0;
+      }
+      .morning__button {
+        padding: 0.8rem 1rem;}
+    .cama {font-size: 16rem;}
+    .feedback__content {
+        font-size: 1.3rem;
+    }
+    .blast__three {
+        margin-top: -2rem;
+      }
+      .footer__title {
+        margin-top: -52rem;
+        font-size: 3.5rem;
+      }
+      .share{font-size: 1.2em;}
+      .footer__input {
+        font-size: 1.2rem;
+        padding-right: 1rem;
+      }
+}
+
+@media screen and (max-width: 1400px) {.bottom__of__footer {margin-top: 15rem;}}
+@media screen and (max-width: 1340px) { .footer__title {margin-top: -49rem;}}
+
+@media screen and (max-width: 1250px) {
+    .submit__text{font-size: 1.2rem;}
+    .submit__btn{padding: 0.4rem 1.2rem; margin-right: 57%;}
+    .coffe__logo {
+        width: 18rem;
+        margin-right: -14rem;
+    }
+    .cup__title,.shop__title {
+        font-size: 3.4rem;
+      }
+      .cup__text {
+        font-size: 1.4rem;
+      }
+      .more__btn{
+        margin-right: 60%;
+      }
+      .right__blast {
+        margin-top: -10rem;
+    }
+    .shop__text {
+        font-size: 1.4rem;
+        padding: 1rem;
+        padding-bottom: 2rem;}
+    .product__buy{
+        padding: 0.6rem 0.5rem;
+        margin: 1rem 5rem;
+    }
+    .product__price {font-size: 1.4rem;}
+    .product__compounds {font-size: 1.2rem;}
+    .product__title {font-size: 1.8rem};
+    .product__image {
+        width: 20rem;
+      }
+      .morning__content {
+        padding-top: 4rem;
+      }
+      .feedbacks {
+        width: 90%;
+      }
+      .right__row {
+        right: 9.8%;
+      }
+      .left__row {
+        left: 9.8%;
+      }
+      .feedback__container {
+        margin-top: 15rem;}
+      .right__cup ,.left__cup {
+        margin-top: -4rem;
+      }
+      .footer__text {
+        margin-top: 2rem;
+      }
+      .bottom__of__footer {
+        margin-top: 11rem;
+      }
+      .footer__title {margin-top: -44rem;}
+}
+@media screen and (max-width: 1140px) {
+    .option__text {font-size: 1.2rem;}
+    .option__title {font-size: 1.8rem;}
+    .feedback__container {margin-top: 12rem;}
+    .footer__title {margin-top: -49rem;}
+    .bottom__of__footer {margin-top: 10rem;}
+    .right__cup, .left__cup {margin-top: -6rem;}
+    .coffe__logo {margin-right: -12rem;}
+}
+@media screen and (max-width: 1070px) {
+    .menu__items{
+        margin-top: 0;
+        gap: 4rem;
+        margin-right: 0;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        background-color: #603809;
+        width: 50%;
+        right: -50%;
+        padding: 3rem;
+        height: 100vh;
+        padding-top: 6rem;
+        z-index: 99999;
+    }
+    .logo__karo__res{
+        display: inline;
+        margin-top: 2rem;
+        margin-right: 10rem;
+    }
+    .submit__buy {
+        width: 50%;
+        margin-top: 10rem;
+      }
+      .submit__btn {
+        padding: 0.4rem 1rem;
+        margin-right: 50%;
+        font-size: 1rem;
+      }
+      .submit__text{font-size: 1rem;}
+      .coffe__logo {
+          width: 16rem;
+          margin-right: -11rem;
+    }
+    .cup__text ,.shop__text{
+        font-size: 1.2rem;
+        padding: 1rem 0;
+      }
+      .cup__title ,.shop__title{
+        font-size: 3rem;
+      }
+      .right__section {
+        width: 62%;
+      }
+      .left__section {
+        width: 38%;
+        margin-top: 2rem;
+      }
+      .more__btn {
+        font-size: 1.2rem;
+        margin-right: 73%;
+        padding: 0.2rem 0.6rem;}
+        .blast-two {
+            margin-top: -3rem;
+          }
+    .option__logo {padding-bottom: 0;}
+    .option__text {font-size: 1.1rem;}
+    .option__title {font-size: 1.6rem;}
+    .def__start {
+        font-size: 1.8rem;}
+    .def__description {
+        font-size: 1.3rem;}
+      .morning__title {
+        font-size: 3rem;
+      }
+      .morning__text {
+        font-size: 1.4rem;
+        padding: 2rem 0;
+      }
+      .morning__button {
+        font-size: 1rem;}
+    .feedbacks {
+        width: 90%;
+        height: 30rem;
+      }
+      .right__row {
+        right: 8.8%;
+        margin-top: 12rem;
+      }
+      .left__row {
+        left: 8.8%;
+        margin-top: 12rem;
+      }
+      .cama {
+        font-size: 15rem;
+        margin-top: 6rem;
+      }
+      .feedback__content {
+        font-size: 1.1rem;
+        padding-top: 2rem;
+      }
+      .feedback__user__name {
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
+      .feedback__user__img {
+        width: 120px;
+        margin: 1rem;
+      }
+      .blast__three {
+        margin-top: 0rem;
+      }
+      .blast__left {
+        margin-top: -9rem;
+      }
+      .caro__logo {
+        width: 50%;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+      }.cafe__caro {
+        width: 15rem;
+      }.call__title, .company__title, .about__title {
+        font-size: 1.5rem;}
+    .bottom__of__footer {
+        color: #fff;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1rem;}
+    .footer__title {
+        margin-top: -52rem;
+        font-size: 3rem;
+    }.footer__text {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .share {
+        transition: 0.5s all;
+        padding: 0.5rem 0.5rem;
+    }
+    .footer__input {
+        padding-left: 8rem;
+    }
+    .footer__title {
+        margin-top: -49rem;
+    }
+    .bottom__of__footer {
+        margin-top: 10rem;
+    }
+    .footer__title {
+        margin-top: -46rem;
+      }
+}
+
+@media screen and (max-width: 1000px){.right__cup, .left__cup {width: 21%;}}
+@media screen and (max-width: 960px){
+  .submit__buy {
+    width: 60%;}
+    .def__title {
+        font-size: 3rem;
+        margin-top: 11rem;
+      }
+    .submit__text {
+        padding: 1rem 2rem;
+    }
+    .coffe__logo {
+        width: 14rem;
+        margin-right: -10rem;
+      }
+      .shop {
+        margin-top: -1rem;
+        width: 88%;
+      }
+      .blast-two {
+        margin-top: -2rem;
+        width: 35%;}
+        .morning__content {
+            width: 55%;
+          }
+      .feedback__content {
+        font-size: 1rem;
+      }
+      .footer__title {
+        margin-top: -42rem;
+      }
+      .bottom__of__footer {
+        line-height: 2rem;
+      }
+      .caro__text {
+        margin-bottom: 1rem;
+      }
+      .caro__logo {
+        margin-top: 0rem;
+      }
+}
+@media screen and (max-width: 905px){
+    .coffe__logo {
+        margin-right: -12rem;
+    }
+    .submit__btn {
+        padding: 0.3rem 0.8rem;
+        margin-right: 60%;
+    }
+    .submit__buy {
+        width: 62%;
+        margin-top: 8rem;
+    }
+    .cup{
+        width: 90%;
+    }
+    .cup__text ,.shop__text{
+        font-size: 1.1rem;
+      }
+      .cup__title ,.shop__title {
+        font-size: 2.5rem;
+      }
+      .right__section {
+        width: 67%;
+      }
+      .left__section {
+        width: 33%;
+      }
+      .more__btn {
+        font-size: 1.1rem;}
+    .right__blast {
+        margin-top: -5rem;
+        width: 30%;
+    }
+    .options {
+        gap: 1rem;
+      }
+      .def__container {
+        width: 90%;
+      }
+    .option__text {font-size: 1rem;}
+    .option__title {font-size: 1.4rem;}
+    .morning__title {
+        font-size: 2.5rem;
+      }
+      .morning__text {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+      }
+      .morning__button {
+        padding: 0.6rem 0.6rem;}
+    .feedback__text {
+        font-size: 1.4rem;
+        padding-top: 1rem;
+    }
+    .feedback__title {
+        font-size: 3rem;
+      }
+    .left__row{left: 7.8%;}
+    .right__row{right: 7.8%;}
+    .footer__title {
+        margin-top: -36rem;
+        font-size: 2rem;
+      }
+      .footer__text {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+      .right__cup, .left__cup {
+        margin-top: -4rem;
+        width: 23%;
+      }
+      .footer__input {
+        padding-left: 2rem;
+        font-size: 1.1rem;
+      }
+      .share {
+        font-size: 1em;
+      }
+      .bottom__of__footer {
+        line-height: 1.5rem;
+      }
+      .footer__input {
+        padding-left: 2rem;
+        font-size: 1.1rem;
+      }
+      .call__text {
+        line-height: 1.5rem;
+      }
+      .caro__text {
+        font-size: 0.8rem;
+      }
+      .cafe__caro {
+        width: 12rem;
+      }
+}
+
+@media screen and (max-width: 770px){
+    .br__tag{
+        display: none;
+    }
+    .submit__text {
+        font-size: 1rem;
+        width: 92%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .coffe__logo {
+        margin-right: -9rem;
+      }
+      .submit__btn {
+        margin-right: 22%;
+    }
+    .submit__buy {
+        margin-top: 15rem;
+      }
+  .cup__text {
+    font-size: 1rem;
+    line-height: 1.5rem;}
+    .product__buy{margin: 1rem 4rem;}
+    .product__image {
+        width: 18rem;
+      }
+      .blast-two {
+        width: 42%;
+      }
+    .option__text {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .option__title {
+        font-size: 1.2rem;
+      }
+      .option__logo {
+        padding: 1rem;
+        padding-bottom: 0;
+        
+      }
+      .def__container {
+        width: 86%;
+      }
+      .feedback__content {
+        padding-top: 1rem;
+      }
+      .footer__title {
+        margin-top: -45.5rem;
+        font-size: 2rem;
+      }
+      .bottom__of__footer {
+        margin-top: 13rem;
+      }
+}
+@media screen and (max-width: 740px){
+    .cup__text ,.shop__text{font-size: 1rem;}
+    .cup__title ,.shop__title {font-size: 2.4rem;}
+    .shop { width: 90%;}
+    .feedbacks {
+        height: 23rem;
+        border-radius: 0.5rem;
+      }
+      .left__row {
+        width: 5rem;
+        margin-top: 10rem;
+      }
+      .right__row {
+        width: 5rem;
+        margin-top: 10rem;
+      }
+      .cama {
+        font-size: 10rem;
+        margin-top: 4rem;
+      }
+      .feedback__content {
+        padding-top: 0rem;
+        font-size: 0.9rem;
+      }
+      .feedback__user__name {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
+      .feedback__user__job {
+        font-size: 1rem;
+      }
+      .feedback__user__img {
+        width: 96px;
+        margin: 1rem;
+        border-radius: 1rem;
+      }
+      .blast__left {
+        margin-top: -6rem;
+      }
+}
+@media screen and (max-width: 700px){
+    .submit__buy {
+        margin-top: 10rem;
+      }
+      .coffe__logo {
+        margin-right: -8rem;
+        width: 12rem;
+      }
+      .submit__text {
+        width: 92%;
+      }
+      .submit__btn {
+        margin-right: 50%;
+      }
+      .right__section {
+        width: 62%;
+      }
+      .cup__title ,.shop__title {
+        font-size: 2rem;
+      }
+      .more__btn {
+        margin-right: 65%;}
+    .product__image {
+        width: 15rem;
+    }
+    .product__buy {
+        margin: 1rem 2.5rem;
+      }
+      .blast-two {
+        margin-top: 0rem;
+        width: 42%;
+      }
+      .def__text {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+      }
+      .def__title {
+        font-size: 2.5rem;
+      }
+      .option__title {
+        font-size: 1.05rem;
+      }
+      .option__logo {
+        padding: 0.8rem;
+      }
+      .option__text {
+        font-size: 0.7rem;
+      }
+      .def__start {
+        font-size: 1.6rem;
+      }
+      .def__description {
+        font-size: 1.2rem;
+      }
+      .morning__button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .morning__text {
+        font-size: 1.1rem;
+        padding: 1rem 0;
+      }
+      .morning__title {
+        font-size: 2rem;}
+    .blast__three {
+        margin-top: 1rem;
+    }
+    .feedback__text {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+      }
+      .feedback__title {
+        font-size: 2.5rem;
+      }
+      .footer__title {
+        margin-top: -42rem;
+        font-size: 2rem;
+      }
+      .bottom__of__footer {
+        margin-top: 8rem;
+        flex-wrap: wrap;
+        gap: 8rem;
+        font-size: 0.9rem;
+      }
+      .call__title, .company__title, .about__title ,.caro__logo {
+        margin-bottom: 1rem;
+      }
+      .footer__about,.cafe__caro{
+        margin-top: -7rem;
+        margin-right: 2rem;
+      }
+}
+@media screen and (max-width: 600px){
+    .product {
+        border-radius: 1rem;}
+    .login_{
+        display: none;
+    }
+    .submit__btn {
+        margin-right: 55%;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+      }
+      .submit__text {
+        width: 92%;
+        font-size: 0.8rem;
+      }
+      .coffe__logo {
+        margin-right: -6rem;
+        width: 8rem;
+      }
+      .right__section {
+        width: 66%;
+      }
+      .cup__title ,.shop__title {
+        font-size: 1.8rem;
+      }
+      .cup__text {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+      .more__btn {
+        font-size: 1rem;
+      }
+      .left__section {
+        margin-top: 4rem;
+      }
+      .right__blast {
+        margin-top: 0rem;
+        width: 35%;
+      }
+      .shop {
+        width: 94%;
+      }
+      .product__image {
+        width: 12rem;
+    }
+    .product__buy {
+        font-size: 0.9rem;
+        margin: 1rem 1.4rem;
+      }
+      .product__price {
+        font-size: 1.2rem;
+      }
+      .product__compounds {
+        font-size: 1rem;
+      }
+      .product__title {
+        font-size: 1.4rem;
+      }
+      .blast-two {
+        margin-top: 1rem;
+      }
+      .def__description {
+        font-size: 1.2rem;
+      }
+      .option__text {
+        font-size: 1rem;
+      }
+      .option__title {
+        font-size: 1.5rem;
+      }
+      .option {
+        width: 12rem;
+      }
+      .options {
+        flex-wrap: wrap;
+      }
+      .def__title {
+        font-size: 2rem;
+      }
+      .def__text {
+        font-size: 1.2rem;
+      }
+      .blast-two {
+        margin-top: 2rem;
+      }
+      .morning__button {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+      }
+      .morning__text {
+        font-size: 1rem;
+        padding: 1rem 0;
+      }
+      .morning__title {
+        font-size: 1.5rem;}
+    .feedbacks {
+        height: 19rem;
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+      }
+      .feedback__title {
+        font-size: 2rem;
+      }
+      .feedback__text {
+        font-size: 1rem;
+      }
+      .right__row {
+        width: 4rem;
+        margin-top: 7rem;
+      }
+      .left__row {
+        width: 4rem;
+        margin-top: 7rem;
+      }
+      .cama {
+        font-size: 7rem;
+        margin-top: 2rem;
+        padding-bottom: 0px;
+      }
+      .feedback__content {
+        padding-top: 0rem;
+        font-size: 0.8rem;
+      }
+      .feedback__user__name {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .feedback__user__img {
+        width: 80px;
+        margin: 0.5rem;
+        border-radius: 1rem;
+      }
+      .blast__three {
+        margin-top: 0rem;
+      }
+      .footer__about, .cafe__caro {
+        margin-top: -4rem;
+        margin-right: 3rem;
+      }
+      .bottom__of__footer {
+        gap: 5rem;
+        margin-top: 5rem;
+    }
+     .caro__text {
+        font-size: 0.6rem;
+      }
+      .call__title, .company__title, .about__title {
+        font-size: 1.1rem;
+      }
+      .footer__input {
+        padding-left: 0rem;
+        font-size: 1rem;
+      }
+      .share {
+        transition: 0.5s all;
+        padding: 0.4rem 0.5rem;
+      }
+      .footer__text, .footer__input__container {
+        margin-top: 2rem;
+      }
+      .footer__text {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+      .footer__title {
+        margin-top: -34rem;
+        font-size: 1.5rem;
+      }
+}
+
+
+
+/* PHONE RESPONSIVE */
+
+@media screen and (max-width: 500px){
+    .shop {
+        width: 90%;
+      }
+    .sign__in {
+        padding: 0.2rem 1rem;
+        font-size: 1rem;
+        border-radius: 4rem;
+        color: black;
+        font-family: vazir;
+        cursor: pointer;
+        height: 2rem;
+    }
+    .berger{
+        right: 2rem;
+    }
+    .logo__karo__res{
+        margin-right: 9rem;
+        width: 9rem;
+    }
+    .submit__buy {
+        margin-top: 6rem;
+      }
+    .submit__btn {
+        margin-right: 46%;}
+    .submit__text {
+        margin-bottom: 0rem;
+        width: 90%;}
+    .coffe__logo {
+        width: 6rem;
+    }
+    .cup__title {
+        font-size: 1.71rem;
+      }
+    .shop__title{
+        font-size: 1.5rem;
+      }
+      .more__btn {
+        margin-right: 61%;
+      }
+    .cup {
+        margin-top: 18rem;
+    }
+    .product__image {
+        width: 11rem;
+      }
+    .shop__text{
+        margin-bottom: 1rem;
+    }
+    .right__blast {
+        margin-top: 0rem;
+        width: 42%;
+      }
+      .def__text ,.def__description ,.join__us{
+        font-size: 1rem;
+      }
+      .option {
+        width: 11rem;
+      }
+      .def__start {
+        font-size: 1.5rem;
+      }
+      .morning__button {
+        padding: 0.3rem;
+        font-size: 0.6rem;
+      }
+      .morning__text {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+      }
+      .morning__title {
+        font-size: 1.4rem;
+      }
+      .join__us{
+        margin: 1rem;
+      }
+      .feedback__user__img {
+        width: 70px;
+        margin: 0.5rem;
+        border-radius: 1rem;
+      }
+      .feedback__user__job {
+        font-size: 0.8rem;
+      }
+      .feedback__user__name {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      .feedback__content {
+        padding-top: 0.5rem;
+        font-size: 0.6rem;
+      }
+      .cama {
+        font-size: 5rem;
+        margin-top: 1rem;
+        padding-bottom: 0px;
+      }
+      .right__row {
+        width: 3rem;
+        margin-top: 5rem;
+      }
+      .left__row {
+        width: 3rem;
+        margin-top: 5rem;
+      }
+      .feedbacks {
+        height: 14rem;
+        margin-top: 1rem;
+        border-radius: 0.2rem;
+      }  .feedback__text {
+        font-size: 0.8rem;
+      } .feedback__title {
+        font-size: 1.5rem;
+      } .blast__three {
+        width: 24%;
+      }  .blast__left {
+        margin-top: -3rem;
+        width: 24%;
+      }
+      .morning__container {
+        margin-top: 5rem;}
+    .footer__about, .cafe__caro {
+        margin-top: -1rem;
+    }
+    .bottom__of__footer {
+        gap: 2rem;
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+      }
+      .footer__title {
+        margin-top: -30.5rem;
+        font-size: 1.5rem;
+      }
+
+
+}
+@media screen and (max-width: 440px){
+    .berger{
+        top: 1.8rem;
+        width: 25px;
+    }
+    .logo__karo__res{
+        margin-right: 8rem;
+        width: 8rem;
+        margin-top: 1.5rem;
+    }
+    .login{
+        margin-top: 1.5rem;
+    }
+    .sign__in {
+        height: 1.8rem;
+        padding: 0.1rem 0.5rem;}
+        .login {
+            margin-left: 1rem;
+        }
+        .submit__text {
+            margin: 0rem;
+            width: 100%;
+            line-height: 1rem;
+            margin-top: -0.5rem;
+            padding: 1rem;
+        }
+        .submit__buy {
+          margin-top: 7rem;
+          width: 57%;
+        }
+    .coffe__logo {
+        margin-right: -4rem;
+    }
+    .submit__btn {
+        margin-right: 52%;
+        padding: 0.1rem 0.3rem;
+    }
+    .more__btn {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+      }
+    .cup__text {
+        font-size: 0.8rem;}
+    .cup__title {
+        font-size: 1.44rem;
+    }
+    .left__section {
+        margin-top: 5rem;
+        width: 36%;
+      }
+      .cup {
+        margin-top: 15rem;
+    }
+    .shop__title {
+        font-size: 1.4rem;
+      }
+      .shop {
+        width: 94%;
+      }
+      .product__buy {
+        font-size: 0.8rem;
+        margin: 0.5rem 1.3rem;
+        padding: 0.4rem 0.5rem;
+      }
+      .product__price {
+        font-size: 1rem;
+        padding: 0;
+      }
+      .product__compounds {
+        font-size: 0.8rem;
+        padding: 0;
+      }
+      .product__title {
+        font-size: 1.2rem;
+        padding: 0;
+      }
+      .product__image {
+        width: 10rem;
+      }
+      .blast-two {
+        margin-top: 3rem;
+        width: 50%;
+      }
+      .option__text {
+        font-size: 0.9rem;}
+    .option__title {
+        font-size: 1.2rem;
+    }
+    .def__text, .def__description, .join__us {
+        font-size: 0.9rem;
+      }
+      .option {
+        width: 9rem;
+      }
+      .morning__button {
+        padding: 0.4rem;
+        font-size: 0.6rem;
+      }
+      .morning__text {
+        font-size: 0.8rem;
+        padding: 1rem 0;
+        line-height: 1rem;
+      }
+      .morning__title {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+      .morning__content {
+        padding-top: 5.5rem;
+      }
+      .feedback__user__img {
+        width: 60px;
+      }
+      .feedback__container {
+        margin-top: 10rem;
+      }
+      .footer__title {
+        margin-top: -27rem;
+      }
+      .footer__text {font-size: 0.7rem};
+      .footer__input__container {
+        margin-top: 1rem;
+      }
+      .footer__input {
+        font-size: 0.8rem;
+      }
+      .share {
+        padding: 0.3rem 0.3rem;
+      }
+      .right__cup, .left__cup {
+        margin-top: -3rem;
+      }
+      .bottom__of__footer {
+        gap: 2rem;
+        margin-top: 4rem;
+        font-size: 0.6rem;
+        line-height: 1rem;
+      }
+      .call__text {
+        line-height: 1rem;
+      }
+      .cafe__caro {
+        width: 11rem;
+      }
+      .caro__text {
+        font-size: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .caro__aplications{width: 60%;}
+      .caro__logo {
+        margin-bottom: 0.5rem;
+      }
+}
+
+
+
+@media screen and (max-width: 390px){
+    .submit__text {width: 100%;}
+      .logo__karo__res{
+        margin-right: 8rem;
+        width: 6rem;
+    }
+    .menu__items{
+        right: -50%;
+        padding: 1.5rem;
+        gap: 3rem;
+        padding-top: 6rem;
+    }
+    .product__buy {margin: 0.5rem 0.8rem;}
+    .products{gap: 1rem;}
+    .def__container {width: 90.2%;}
+    .option__title{padding: 0;}
+    .feedback__content {
+        line-height: 0.8rem;
+        padding-top: 0.2rem;
+    }
+    .feedback__user__job {
+        margin: -0.4rem;
+      } .feedback__user__img {
+        width: 50px;
+      }
+      .feedback__user__name {
+        margin-top: 0rem;
+      }.feedbacks{height: 13rem;}
+      .footer__title {
+        margin-top: -26rem;
+      }
+      .footer__text {
+        margin-top: 0;
+      }
+      .footer__input__container {
+        margin-top: 0.5rem;
+      }
+      .footer__input {
+        font-size: 0.6rem;
+        padding-right: 0.5rem;
+      }
+      footer{margin-top: -8rem;}
+      .share {
+        font-size: 0.7rem;
+      }
+      .right__cup, .left__cup {
+        width: 25%;
+      }
+      .call__title, .company__title, .about__title {
+        font-size: 1rem;
+      }
+      .cafe__caro {
+        width: 10rem;
+      }
+      .top-bg{box-shadow: 0 0 0 rgba(0, 0, 0, 0);}
+}
+
